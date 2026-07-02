@@ -1,4 +1,3 @@
-
 # CIFAR-10 Image Classification Using a Convolutional Neural Network
 
 This repository explores image classification using a Convolutional Neural Network (CNN) implemented with TensorFlow/Keras on the CIFAR-10 dataset. The project focuses on constructing and training a deep convolutional architecture while demonstrating core deep learning concepts such as convolutional feature extraction, pooling, regularization, and early stopping.
@@ -19,8 +18,9 @@ The project implements a complete deep learning workflow, including:
 - L2 weight regularization
 - Early stopping based on validation loss
 - Model training and evaluation on unseen test data
+- Saving the trained model in Keras format
 
-The project demonstrates how convolutional neural networks progressively learn increasingly complex visual features for image classification tasks.
+The project demonstrates the construction, training, evaluation, and persistence of a convolutional neural network for multi-class image classification.
 
 ---
 
@@ -32,7 +32,7 @@ The implemented CNN consists of:
 - Six Convolutional layers
 - Three Max Pooling layers
 - Flatten layer
-- Two Dense fully connected layers
+- Two Dense (fully connected) layers
 - Dropout regularization
 - Softmax output layer for multi-class classification
 
@@ -54,7 +54,7 @@ The dataset contains:
 
 - 60,000 colour images
 - 10 object categories
-- 32 × 32 pixel images
+- 32 × 32 pixel RGB images
 - Predefined training and testing splits
 
 The dataset is loaded directly through the Keras datasets API.
@@ -72,6 +72,8 @@ The model is trained using:
 
 Early stopping restores the best-performing model weights to reduce overfitting during training.
 
+After training, the model is saved in Keras format (`.keras`) for future inference or continued training.
+
 ---
 
 ## Limitations and Scope
@@ -83,6 +85,7 @@ This project is intentionally scoped as an educational and portfolio-oriented de
 - Limited hyperparameter tuning
 - No transfer learning
 - No visualization of training history
+- No data visualization of model predictions
 - No confusion matrix or class-wise performance analysis
 
 These limitations reflect a focus on understanding CNN architecture and training workflow rather than optimizing model performance for production deployment.
@@ -94,8 +97,22 @@ These limitations reflect a focus on understanding CNN architecture and training
 This repository is intended to demonstrate:
 
 - Practical understanding of convolutional neural networks
-- Ability to design and train deep learning models
+- Ability to design, train, evaluate, and save convolutional neural network models
 - Familiarity with TensorFlow/Keras workflows
 - Knowledge of regularization and model evaluation techniques
 
 This project is shared for educational and portfolio purposes.
+
+---
+
+## Technologies Used
+
+- Python
+- TensorFlow
+- Keras
+
+---
+
+## License
+
+This project is released under the MIT License.
